@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | Private Fitness Instructor</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <section class="signup">
+    <div class="section_container">
+      <h2 class="section_header">Create Your Fitness Profile</h2>
+      <form action="connect.php" method="POST" class="signup_form">
+        <input type="text" name="FirstName" placeholder="First Name" required />
+        <input type="text" name="LastName" placeholder="Last Name" required />
+        <input type="date" name="DateOfBirth" required />
+        <select name="Gender" required>
+          <option value="">Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        <input type="text" name="ContactInfo" placeholder="Phone or Email" required />
+        <textarea name="HealthConditions" placeholder="Health Conditions"></textarea>
+        <textarea name="FitnessGoals" placeholder="Fitness Goals"></textarea>
+        <button type="submit" class="btn">Sign Up</button>
+      </form>
+    </div>
+  </section>
+
+</body>

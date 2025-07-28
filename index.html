@@ -1,0 +1,271 @@
+<!Doctype html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link href="https://cdn.jsdelivr.net/npm/remixicon@4.4.0/fonts/remixicon.css" rel="stylesheet"/>
+            <link rel="stylesheet" href="style.css" />
+        <title>web design| private fitness instructor</title>
+        </head>
+        <link rel="stylesheet" href="styles/styles.css">
+        <title>Login</title>
+      </head>
+     
+      <body id="body">
+        <div class="d-flex justify-content-center align-items-center vh-100">
+          <div class="card shadow-lg" style="width: 30rem;">
+            <div class="card-body">
+              <h3 class="card-title text-center text-info">Sign Up</h3>
+              <form id="login-form" action="<?php=htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="post">
+              <div class="mb-3">
+                  <label for="email" class="form-label text-info">Username:</label>
+                  <input type="text" name="username" id="username" class="form-control">
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label text-info">Email:</label>
+                  <input type="email" name="email" id="email" class="form-control">
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label text-info">Password:</label>
+                  <input type="password" name="password" id="password" class="form-control">
+                </div>
+                <div class="d-grid">
+                  <input type="submit" name="submit" value="Sign Up" class="btn btn-primary btn-md">
+                </div>
+                <div class="mt-3 text-center">
+                  <a href="login.php" class="text-info">Log in</a>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </body>
+    </html>
+    
+
+    
+        <body>
+        <header>
+        <nav>
+        <div class="nav_header">
+        <div class="nav_logo">
+        <a href="#>
+        <img src="assets/logo-white.png" alt="logo" class="logo-white">
+        <img src="assets/logo-dark.png" alt="logo" class="logo-dark">
+        </a>
+        </div>
+        <div class="nav_menu_btn" id="menu-btn">
+            <i class="ri-menu-line"></i>
+        </div>
+    </div>
+    <ul class="nav_links" id="nav-links"></ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#service">Service</a></li>
+    <li><a href="#Class">Classes</a></li>
+    <li><a href="#contact">Blog</a></li>
+    <li><a href="#">Join now</a></li>
+</ul>
+<div class="nav_btns">
+    <button class="btn">Join now</button>
+</div>
+        </nav>
+        <div class="section_container header" id="home">
+            <div class="header_content">
+                <h1>DON'T STOP TILL YOUR SUCCESS!</h1>
+                <H2>GET FIT TO HAPPY</H2>
+                <P>
+                    Unlock your full potential with our expert training and 
+                    state -of-the-art facilities. Every step you make brings you closer
+                    to a healthier, happier you. Lets make fitness a lifestyle!
+                </P>
+                <div class="header_btn">
+                    <button class="btn">Explore more</button>
+         </div>
+        </div>
+        <div class="header_image">
+            <img src="assets/header.png.jpg" alt="header" />
+   </div>
+    </div>
+   </header>
+
+   <div class="about" id="about">
+    <div class="section_container about_container">
+        <div class="about_image">
+            <img src="assets/about.png.jpg" alt="about" />
+        </div>
+        <div class="about_content">
+        <h2 class="section_header">Ready To Make A Change?</h2>
+        <p>
+            Taking the first step towards a healthier, stronger you.
+        </p>
+        
+        <form action="connect.php" method="post">
+            <input type="text" name="FirstName" placeholder="First Name" required />
+            <input type="text" name="LastName" placeholder="Last Name" required />
+            <input type="date" name="DateOfBirth" placeholder="Date of Birth" required />
+            <select name="Gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <input type="text" name="ContactInfo" placeholder="Contact Information" required />
+            <textarea name="HealthConditions" placeholder="Health Conditions"></textarea>
+            <textarea name="FitnessGoals" placeholder="Fitness Goals"></textarea>
+            <button type="submit" class="btn">Get Started</button>
+        </form>
+    </div>
+
+        <div class="btn">
+            <button class="btn">Get Started</button>
+        </div>
+        </div>
+    </div>
+   </div>
+
+   <section class="service" id="service">
+    <div class="section_container service_container">
+        <h2 class="section_header">Book a Session</h2>
+    <form action="connect.php" method="post">
+        <select name="ClientID" required>
+            <!-- You would dynamically populate the list with client names from the database -->
+            <option value="">Select Client</option> <!-- Default option -->
+        </select>
+        <input type="date" name="SessionDate" placeholder="Session Date" required />
+        <input type="time" name="SessionTime" placeholder="Session Time" required />
+        <input type="number" name="Duration" placeholder="Duration (minutes)" required />
+        <input type="text" name="SessionType" placeholder="Session Type" required />
+        <input type="text" name="Location" placeholder="Location" required />
+        <button type="submit" class="btn">Schedule Session</button>
+    </form>
+</div>
+
+<div class="payment_content">
+    <h2 class="section_header">Make a Payment</h2>
+    <form action="connect.php" method="post">
+        <select name="ClientID" required>
+            <option value="1">John Doe</option>
+        </select>
+        <select name="SessionID" required>
+            <option value="1">Session 1</option>
+        </select>
+        <input type="date" name="PaymentDate" required />
+        <input type="number" name="Amount" placeholder="Amount" required />
+        <select name="PaymentMethod" required>
+            <option value="Credit Card">Credit Card</option>
+            <option value="Cash">Cash</option>
+            <option value="Bank Transfer">Bank Transfer</option>
+        </select>
+        <button type="submit" class="btn">Submit Payment</button>
+    </form>
+</div>
+
+        <h2 class="section_header">Services we Provide</h2>
+        <div class="service_grid">
+            <div class="service_card">
+                <span>01</span>
+                <h4>Fitness Training 
+                    Ksh. 1000
+                </h4>
+                <p>
+                    Our fitness training program are there to help you to strenghten your 
+                    body, hygine, improve on phsicality and achieve your peersonal goals. 
+                </p>
+            </div>
+            <div class="service_card">
+                <span>02</span>
+                <h4>Yoga
+                    Ksh. 2500
+                </h4>
+                <p>
+                    A physical activity for bridging the gap between the mind (soul) and the physical.
+                    It also helps to manage pain and reduce stress. Various styles of yoga combine physical postures,
+                     breathing techniques, and meditation
+                    </p>
+        </div>
+        <div class="service_card">
+            <span>03</span>
+            <h4>Gymnastic
+                Ksh. 3000
+            </h4>
+            <p>
+               Our gymnastic classes are designed to help develop physical fitness
+                by improving strength, flexibility, coordination, and agility.
+                There are various exercises like cartwheels, handstands, and 
+                tumbling, children strengthen muscles across their body,
+                 improving their agility and range of motion.
+            </p>
+    </div>
+    <div class="service_card">
+        <span>04</span>
+        <h4>Karate 
+            Ksh.4100
+        </h4>
+        <p>
+           It is suitable for all ages, gender and skillful levels our karate classes help 
+           to someone to develop agility, strength and speed, allowing for fast
+            and effective techniques while also improving muscle tone and endurance.
+            Working both the hands and feet, and left and right sides equally, it 
+            develops mental and physical coordination, as well as flexibility. 
+            </p>
+        </div>
+        <div class="service_image">
+            <img src="assets/service.png.jpg" alt="service" />
+        </div>
+    </div>
+</div>
+   </section>
+  
+   <section class="popular" id="class">
+    <div class="section_container popular_container">
+        <h2 class="section_header">What Do You Want To Join Today</h2>
+        <div class="popular_grid">
+            <div class="popular_card">
+                <div>
+                    <h4>Cardio Strength</h4>
+                    <p>Full-body workout with cardio</p>
+                </div>
+                <span>
+                    <i class="ri-arrow-right-fill"></i>
+                </span>
+            </div>
+            <div class="popular_card">
+                <div>
+                    <h4>Weight Trianing</h4>
+                    <p>Build muscle strength</p>
+                </div>
+                <span>
+                    <i class="ri-arrow-right-fill"></i>
+                </span>
+                <div class="popular_card">
+                    <div>
+                        <h4>Yoga for flexibility</h4>
+                        <p>Improve flexibility and relax</p>
+                    </div>
+                    <span>
+                        <i class="ri-arrow-right-fill"></i>
+                    </span>
+                    <div class="popular_card">
+                        <div>
+                            <h4>HIIT</h4>
+                            <p>Short bursts of intense exercise</p>
+                        </div>
+                        <span>
+                            <i class="ri-arrow-right-fill"></i>
+                        </span>
+                        <div class="popular_card">
+                            <div>
+                                <h4>Personal training</h4>
+                                <p>Customize workpout plans</p>
+                            </div>
+                            <span>
+                                <i class="ri-arrow-right-fill"></i>
+                            </span>
+        </div>
+    </div>
+   </section>
+  
+   <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="main.js"></script>
+</html>
+</body>
